@@ -15,7 +15,7 @@ LABEL website="https://github.com/phspo/ckmertools"
 
 RUN git clone https://github.com/phspo/ckmertools.git && \
   cd ckmertools && \
-  git checkout 9395c1205429f2aa1c6fe94231028a1e4ec976af
+  git checkout 7dfb0a7d86284357f88b734f8a13800e3295bf0e
 
 RUN apt-get install -y bash
 
