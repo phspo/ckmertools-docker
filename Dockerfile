@@ -13,13 +13,19 @@ RUN     apt-get update -y && apt-get install -y \
 LABEL license="https://github.com/phspo/ckmertools/blob/master/LICENSE.MD && https://github.com/phspo/ckmertools/blob/master/src/ctpl/LICENSE"
 LABEL website="https://github.com/phspo/ckmertools"
 
-RUN git clone https://github.com/phspo/ckmertools.git && \
-  cd ckmertools && \
-  git checkout 5529d7993a077d26e5e3f183e4d83d9c20cea903
-
 RUN apt-get install -y bash
 
-RUN cd ckmertools && \  
+RUN git clone https://github.com/rogersce/cnpy.git && \
+  mkdir cnpy/build && \
+  cd cnpy/build && \
+  git checkout 4e8810b1a8637695171ed346ce68f6984e585ef4 && \
+  cmake .. && \
+  make && \
+  make install
+
+RUN git clone https://github.com/phspo/ckmertools.git && \
+  cd ckmertools && \
+  git checkout 0aab4cbb074ba415f41b912f079579d7c041cef5 && \
   mkdir build && \
   cd build && \
   cmake ../ && \
