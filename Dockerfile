@@ -17,8 +17,7 @@ RUN apt-get install -y bash
 
 RUN git clone https://github.com/rogersce/cnpy.git && \
   mkdir cnpy/build && \
-  cd cnpy/build && \
-  git checkout 4e8810b1a8637695171ed346ce68f6984e585ef4 && \
+  cd cnpy/build && git checkout 4e8810b1a8637695171ed346ce68f6984e585ef4 && \
   cmake .. && \
   make && \
   make install
