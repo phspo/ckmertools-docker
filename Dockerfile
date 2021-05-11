@@ -1,6 +1,6 @@
 FROM debian:bullseye-slim
 
-RUN     apt-get update -y && apt-get install -y \
+RUN apt-get update -y && apt-get install -y \
 	gcc \
 	g++ \
 	git \
@@ -24,7 +24,7 @@ RUN git clone https://github.com/rogersce/cnpy.git && \
 
 RUN git clone https://github.com/phspo/ckmertools.git && \
   cd ckmertools && \
-  git checkout fe51a54b55abeac5457ff38a69d67aff4c4e1081 && \
+  git checkout 982266ae1eaa423234fe40be5560313a67417c09 && \
   mkdir build && \
   cd build && \
   cmake ../ && \
