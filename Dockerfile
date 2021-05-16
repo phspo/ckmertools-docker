@@ -20,7 +20,9 @@ RUN git clone https://github.com/rogersce/cnpy.git && \
   cd cnpy/build && git checkout 4e8810b1a8637695171ed346ce68f6984e585ef4 && \
   cmake .. && \
   make && \
-  make install
+  make install && \
+  echo "/usr/local/lib" >> /etc/ld.so.conf.d/cnpy.conf && \
+  ldconfig
 
 RUN git clone https://github.com/phspo/ckmertools.git && \
   cd ckmertools && \
