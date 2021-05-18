@@ -26,7 +26,7 @@ RUN git clone https://github.com/rogersce/cnpy.git && \
 
 RUN git clone https://github.com/phspo/ckmertools.git && \
   cd ckmertools && \
-  git checkout c6bd9ee8ebd2286f832d47c7007d5192d0c5d9fe && \
+  git checkout e9b7442efa1fa87f74c84ea71d6d57aa42c24e30 && \
   mkdir build && \
   cd build && \
   cmake ../ && \
